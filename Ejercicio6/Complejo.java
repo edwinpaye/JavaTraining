@@ -4,7 +4,6 @@ public class Complejo {
 
 	private double real;
 	private double imag;
-	// private int entero;
 
 	public Complejo(double x, double y) {
 		this.real = x;
