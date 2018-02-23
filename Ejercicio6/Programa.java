@@ -60,7 +60,7 @@ public class Programa {
 
 		c = a.rest(b);
 		if (c.real == 0 && c.imag == 0) {
-			
+
 			return "\nLos numeros complejos ("+a.real+", "+a.imag+") y ("+b.real+", "+b.imag+") son iguales.\n"
 		}
 		else {
