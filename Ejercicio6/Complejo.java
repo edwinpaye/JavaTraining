@@ -2,8 +2,8 @@ package Ejercicio6;
 
 public class Complejo {
 
-	private double real;
-	private double imag;
+	double real;
+	double imag;
 
 	public Complejo(double x, double y) {
 		this.real = x;
@@ -21,8 +21,8 @@ public class Complejo {
 	public Complejo rest(Complejo z) {
 		return new Complejo(this.real - z.real, this.imag - z.imag);
 	}
-	
-	public Complejo multInt(double z) {
-		return new Complejo(this.real * z, this.imag * z);
+
+	public Complejo multInt(Complejo z) {
+		return new Complejo(this.real * z.real, this.imag * z.real);
 	}
 }

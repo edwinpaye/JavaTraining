@@ -8,7 +8,6 @@ public class Programa {
 
 	private double real;
 	private double imag;
-	private double entero;
 	Complejo a, b, c;
 
 	public Programa() {}
@@ -22,15 +21,22 @@ public class Programa {
 		return new Complejo(real, imag);
 	}
 
-	private int setInt() {
+	private Complejo getInt() {
 
 		System.out.print("Digite el numero entero: ");
-		entero = scn.nextDouble();
+		real = scn.nextDouble();
+		imag = 0;
+		return new Complejo(real, imag);
 	}
 
-	private int getOpcion() {
+	public int getOpcion() {
 
-		System.out.print("Digite una de las opciones: ");
+		System.out.print("\nDigite una de las opciones: "
+			+"\n1. Sumar el numero complejo ("+a.real+", "+a.imag+") con otro numero complejo."
+			+"\n2. Multiplicar el numero complejo ("+a.real+", "+a.imag+") con otro numero complejo."
+			+"\n3. Comparar el numero complejo ("+a.real+", "+a.imag+") con otro numero complejo."
+			+"\n4. Multiplicar el numero complejo ("+a.real+", "+a.imag+") con un numero entero."
+			+"\n5. Salir del programa.");
 		return scn.nextInt();
 	}
 
@@ -44,16 +50,21 @@ public class Programa {
 		b = getComplejo();
 	}
 
+	public void setBInt() {
+
+		b = getInt();
+	}
+
 	public String suma() {
 
 		c = a.add(b);
-		return "\nLa suma de los numeros complejos ("+a.real+", "+a.imag+") + ("+b.real+", "+b.imag+") es: ("+c.real+", "+c.imag+").\n"
+		return "\nLa suma de los numeros complejos ("+a.real+", "+a.imag+") + ("+b.real+", "+b.imag+") es: ("+c.real+", "+c.imag+").\n";
 	}
 
 	public String multiplicar() {
 
 		c = a.mult(b);
-		return "\nLa multiplicacion de los numeros complejos ("+a.real+", "+a.imag+") X ("+b.real+", "+b.imag+") es: ("+c.real+", "+c.imag+").\n"
+		return "\nLa multiplicacion de los numeros complejos ("+a.real+", "+a.imag+") X ("+b.real+", "+b.imag+") es: ("+c.real+", "+c.imag+").\n";
 	}
 
 	public String comparar() {
@@ -61,16 +72,16 @@ public class Programa {
 		c = a.rest(b);
 		if (c.real == 0 && c.imag == 0) {
 
-			return "\nLos numeros complejos ("+a.real+", "+a.imag+") y ("+b.real+", "+b.imag+") son iguales.\n"
+			return "\nLos numeros complejos ("+a.real+", "+a.imag+") y ("+b.real+", "+b.imag+") son iguales.\n";
 		}
 		else {
-			return "\nLos numeros complejos ("+a.real+", "+a.imag+") y ("+b.real+", "+b.imag+") no son iguales.\n"
+			return "\nLos numeros complejos ("+a.real+", "+a.imag+") y ("+b.real+", "+b.imag+") no son iguales.\n";
 		}
 	}
 
 	public String multiplicarEnt() {
 
-		c = a.multInt(entero);
-		return "\nLa multiplicacion del numero complejo y entero ("+a.real+", "+a.imag+") X "+entero+" es: ("+c.real+", "+c.imag+").\n"
+		c = a.multInt(b);
+		return "\nLa multiplicacion del numero complejo y entero ("+a.real+", "+a.imag+") X "+b.real+" es: ("+c.real+", "+c.imag+").\n";
 	}
 }
