@@ -2,8 +2,8 @@ package Ejercicio11;
 
 public class CafeExpreso implements Cafetera {
 
-	public Cafe getIngredientes(int posicion) {
+	public Cafe getIngredientes() {
 
-		return Cafe.values()[posicion];
+		return Cafe.EXPRESO;
 	}
 }

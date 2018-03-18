@@ -28,15 +28,15 @@ public class ProgramaCafe {
 
 		int posicion = menu.getOpcion();
 		switch (posicion) {
-			case 1: cafetera = new CafeNegro();
+			case 0: cafetera = new CafeNegro();
 					break;
-			case 2: cafetera = new CafeCargado();
+			case 1: cafetera = new CafeCargado();
 					break;
-			case 3: cafetera = new CafeExpreso();
+			case 2: cafetera = new CafeExpreso();
 					break;
-			case 4: cafetera = new CafeNormal();
+			case 3: cafetera = new CafeNormal();
 					break;
 		}
-		return cafetera.getIngredientes(posicion);
+		return cafetera.getIngredientes();
 	}
 }
