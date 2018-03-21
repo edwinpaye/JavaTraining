@@ -2,7 +2,7 @@ package Ejercicio11;
 
 enum Cafe {
 
-	NEGRO, CARGADO, EXPRESO, NORMAL,
+	NEGRO, CARGADO, EXPRESO, NORMAL
 
 }
 
